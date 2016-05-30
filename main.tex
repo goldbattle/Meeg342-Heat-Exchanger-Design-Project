@@ -1,0 +1,53 @@
+% Document Settings
+\documentclass[11pt]{extarticle}
+\usepackage[a4paper,margin=0.8in]{geometry}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{black}}
+
+% Imports
+\usepackage{multicol,caption}
+\usepackage{amsmath}
+\usepackage{breqn}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{lipsum}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{float} % allow using of [H] tag on "figure"s
+\usepackage{color} % color text package
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+
+% New figure type to work with multicolumns
+\newenvironment{figure_multi}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+% Make all tables a bit more padded
+%\renewcommand{\arraystretch}{2.0}
+
+% Nicer section headers
+%\renewcommand*{\thesection}{CH~\arabic{section}}
+%\renewcommand\thesubsection{\arabic{subsection}}
+
+% Padding Settings
+% \usepackage[nodisplayskipstretch]{setspace}
+% \setstretch{0.5}
+% \AtBeginDocument{%
+%   \addtolength\abovedisplayskip{-1.5\baselineskip}%
+%   \addtolength\belowdisplayskip{-1.5\baselineskip}%
+% }
+\graphicspath{ {pictures/} }
+
+% Document
+\begin{document}
+%\begin{multicols}{3}
+\include{sections/00_titlepage}
+\include{sections/01_content}
+\include{sections/02_content}
+\include{sections/03_content}
+\include{sections/04_content}
+\include{sections/05_content}
+%
+\include{sections/06_appendix}
+%\end{multicols}
+\end{document}
